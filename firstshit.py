@@ -282,7 +282,7 @@ def filter_white(c):
     if c[0] > 0.85 and c[1] > 0.85 and c[2] > 0.85:
         return [c[0], c[1], c[2], 0.0]
     else:
-        return [1.0 - (c[0] ** 2.0), 1.0 - (c[1] ** 2.0), 1.0 - (c[2] ** 2.0), 1.0]
+        return [1.0 - (c[0] ** np.random.randint(1, high=10)), 1.0 - (c[1] ** np.random.randint(1, high=10)), 1.0 - (c[2] ** 2.0), 1.0]
 image = [[filter_white(color) for color in row] for row in imge.imread('img/cursed-emoji.png')]
 # print(np.shape(xdx))
 # from matplotlib import image
